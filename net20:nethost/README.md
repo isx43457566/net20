@@ -1,8 +1,7 @@
 # SSHD Kerberitzat
 ## @edt ASIX M11-SAD Curs 2020-21
 
-**isx43457566/net20:nethost** Servidor de serveis de xarxa, usant xinetd, redireccions, httpd, 
-  vsftp, ftpd, etc. S'utilitza per fer tests de connectivitat, xinetd, tcpwrappers, túnels ssh i iptables.
+**isx43457566/net20:nethost** Servidor de serveis de xarxa, usant xinetd, redireccions, httpd, vsftp, ftpd, etc. S'utilitza per fer tests de connectivitat, xinetd, tcpwrappers, túnels ssh i iptables.
 
  * serveis xinetd: echo(7), daytime(13) i chargen(19) stream (tcp).
  * serveis xinetd: echo(7), daytime(13) i chargen(19) dgram (udp).
@@ -27,14 +26,14 @@ Execució:
 
 Sense mapejar els ports
 ```
-docker netweork create mynet
-docker run --rm --name nethost -h nethost --net mynet -d edtasixm11/net18:nethost
+docker network create mynet
+docker run --rm --name nethost.edt.org -h nethost.edt.org --net 2hisix -d isx43457566/net18:nethost
 ```
 
 Amb ports mapejats
 ```
-docker netweork create mynet
-docker run --rm --name nethost -h nethost --net mynet -p 7:7 -p 13:13 -p 80:80 -d isx43457566/net20:nethost
+docker network create mynet
+docker run --rm --name nethost.edt.org -h nethost.edt.org --net 2hisix -p 7:7 -p 13:13 -p 80:80 -d isx43457566/net20:nethost
 ```
 
 
