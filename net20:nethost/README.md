@@ -27,7 +27,7 @@ Execució:
 Sense mapejar els ports
 ```
 docker network create mynet
-docker run --rm --name nethost.edt.org -h nethost.edt.org --net 2hisix -d isx43457566/net18:nethost
+docker run --rm --name nethost.edt.org -h nethost.edt.org --net 2hisix -d isx43457566/net20:nethost
 ```
 
 Amb ports mapejats
